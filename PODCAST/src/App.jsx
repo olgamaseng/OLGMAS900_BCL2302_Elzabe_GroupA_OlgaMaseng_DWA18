@@ -1,19 +1,8 @@
 import React from 'react';
-import FetchAPI from './Components/FetchApi.jsx';
-import PrimarySearchAppBar from './Components/PrimarySearchAppBar.jsx'
+import Home from './Pages/Home';
+import Genre from './Pages/Genre';
+import Seasons from './Pages/Seasons';
 
-
-function App()  {
-  return (
-    <div>
-       <PrimarySearchAppBar />
-       <FetchAPI />
-       {/* <SignInSide /> */}
-      {/* <NavBar /> */}
-      {/* Other components and content */}
-    </div>
-  );
+function App(){
+  return
 }
-
-export default App;
-

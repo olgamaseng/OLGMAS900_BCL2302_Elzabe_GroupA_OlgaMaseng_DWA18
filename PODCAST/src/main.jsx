@@ -1,33 +1,57 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./pages/Layout";
-import Home from "./pages/Home";
-import Blogs from "./pages/Blogs";
-import Contact from "./pages/Contact";
-import NoPage from "./pages/NoPage";
+import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";
 
-export default function App() {
+function Layout() {
+  return (
+    <div>
+      <h3>Mindful Moments</h3>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/genre">Genre</Link>
+        <Link to="/seasons">Seasons</Link>
+      </nav>
+      <Outlet />
+    </div>
+  )
+};
+
+function HomePage() {
+  return (
+    <main>
+      <h2>Home</h2>
+    </main>
+  );
+}
+
+function GenrePage() {
+  return (
+    <main>
+      <h2>Genre</h2>
+    </main>
+  );
+}
+
+function SeasonsPage() {
+  return (
+    <main>
+      <h2>Seasons</h2>
+    </main>
+  );
+}
+
+function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="blogs" element={<Blogs />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<NoPage />} />
+          <Route index element={<HomePage />} />
+          <Route path="genre" element={<GenrePage />} />
+          <Route path="seasons" element={<SeasonsPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
-  );
+  )
 }
 
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+ReactDOM.createRoot(document.getElementById("root")).render(<App />)
