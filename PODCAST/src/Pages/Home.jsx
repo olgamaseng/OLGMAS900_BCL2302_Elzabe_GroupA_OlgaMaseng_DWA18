@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import SignInSide from '../Components/Sign In';
 
 export default function HomePage() {
     return (
       <div>
               <h3>Mindful Moments</h3>
-              <Link to="../Components/Sign In.jsx"></Link>
+              <SignInSide />
 
       </div>
     );

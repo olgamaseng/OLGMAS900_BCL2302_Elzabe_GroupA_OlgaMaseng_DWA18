@@ -1,6 +1,7 @@
 
 import {useState, useEffect} from 'react'
-import MyComponent from './Grid'
+import {Link} from 'react-router-dom'
+
 
 export default function FetchAPI() { 
     
@@ -14,15 +15,19 @@ export default function FetchAPI() {
          .then((data) => {
          const fetching = data.map((show) => { 
             return( 
-            <div key={show.id}> 
+        
+        <div key={show.id} className="show-container">
+         
+        <Link to={`/genre/${show.id}`}>          
+                <img src={show.image} width = "20%"/> 
+                
+               </Link>  
          <p>{show.id}</p> 
-         {/* <p>{show.description}</p> 
+         <p>{show.description}</p> 
          <h1>{show.title}</h1>
-          <p>{show.genres}</p>
-           <p>{show.updated}</p>  */}
-           <img src={show.image} width = "50%"/> 
-           {/* <h1>{show.seasons}</h1>  */}
-           <MyComponent />
+          {/* <p>{show.genres}</p>
+           <p>{show.updated}</p>  
+           <h1>{show.seasons}</h1>  */}
            </div> )
             }); 
            
