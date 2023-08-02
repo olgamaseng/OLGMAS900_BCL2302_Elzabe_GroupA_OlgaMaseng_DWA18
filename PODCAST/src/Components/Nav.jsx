@@ -1,0 +1,102 @@
+import React, { useState } from "react";
+import FetchAPI from "./FetchApi";
+import podcast from '../images/podcast.jpg';
+
+export default function Navigation() {
+  const [searchTerm, setSearchTerm] = useState("");
+  
+  const handleSearch = (e) => {
+    e.preventDefault();
+    // Replace this console.log with your actual search logic.
+    console.log("Searching for:", searchTerm);
+  };
+
+  return (
+    
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        
+      <div className="container-fluid">
+        <a className="navbar-brand" href="/">
+          <img
+            src={podcast} 
+            alt="Mindful Moments"
+            width="80"
+            height="50"
+          />
+        </a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+            style={{ "--bs-scroll-height": "100px" }}
+          >
+            <li className="nav-item">
+              <a className="nav-link active" aria-current="page" href="/">
+                Home
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/genre">
+                Genre
+              </a>
+            </li>
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="/seasons"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Seasons
+              </a>
+              <ul className="dropdown-menu">
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Favourites
+                  </a>
+                </li>
+                <li>
+                  <hr className="dropdown-divider" />
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Something else here
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link disabled" aria-disabled="true">
+                Link
+              </a>
+            </li>
+          </ul>
+          <form className="d-flex" role="search" onSubmit={handleSearch}>
+            <input
+              className="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <button className="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  );
+}

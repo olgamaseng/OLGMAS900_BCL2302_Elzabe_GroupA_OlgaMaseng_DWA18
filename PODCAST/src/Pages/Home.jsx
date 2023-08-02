@@ -1,11 +1,11 @@
 import React from 'react';
-import SignInSide from '../Components/Sign In';
+import App from '../App';
 
 export default function HomePage() {
     return (
       <div>
-              <h3>Mindful Moments</h3>
-              <SignInSide />
+           
+              <App />
 
       </div>
     );

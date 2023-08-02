@@ -1,38 +1,35 @@
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-import {useState, useEffect} from 'react'
-import {Link} from 'react-router-dom'
+export default function FetchAPI() {
+  const url = "https://podcast-api.netlify.app/shows";
+  const [dataId, setDataId] = useState([]);
 
+  useEffect(() => {
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        setDataId(data);
+      });
+  }, []);
 
-export default function FetchAPI() { 
-    
-    const url = "https://podcast-api.netlify.app/shows" 
-
-    const [dataId, setDataId] = useState([]) 
-
-    useEffect(() => {
-        fetch(url) 
-        .then((response) => response.json())
-         .then((data) => {
-         const fetching = data.map((show) => { 
-            return( 
-        
-        <div key={show.id} className="show-container">
-         
-        <Link to={`/genre/${show.id}`}>          
-                <img src={show.image} width = "20%"/> 
-                
-               </Link>  
-         <p>{show.id}</p> 
-         <p>{show.description}</p> 
-         <h1>{show.title}</h1>
-          {/* <p>{show.genres}</p>
-           <p>{show.updated}</p>  
-           <h1>{show.seasons}</h1>  */}
-           </div> )
-            }); 
-           
-           setDataId(fetching); }) }, 
-           []);
-            return <div>{dataId}</div> }
-
-            
+  return (
+    <div className="container">
+      <div className="row">
+        {dataId.map((show) => (
+          <div key={show.id} className="col-md-2 mb-2">
+            <div className="card">
+              <Link to={`/seasons/${show.id}`}>
+                <img src={show.image} className="card-img-top" alt="show cover" />
+              </Link>
+              <div className="card-body">
+                {/* <p className="card-text">{show.description}</p> */}
+                <p>Seasons: {show.seasons}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
