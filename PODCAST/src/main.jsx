@@ -6,7 +6,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./App.css";
-import GenrePage from "./Pages/Genre";
+import ShowsPage from "./Pages/Shows.jsx";
 import SeasonsPage from "./Pages/Seasons";
 import HomePage from "./Pages/Home.jsx";
 
@@ -22,11 +22,11 @@ const router = createBrowserRouter([
  },
 
   {
-     path:"/genre", element: <GenrePage /> 
+     path:"/shows", element: <ShowsPage /> 
   },
 
   {
-    path: "/seasons", element: <SeasonsPage /> 
+    path: "/seasons/:id", element: <SeasonsPage /> 
   }
 
 ]);

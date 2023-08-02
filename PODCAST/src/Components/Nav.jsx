@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import FetchAPI from "./FetchApi";
+import genre from "./Genre";
 import podcast from '../images/podcast.jpg';
 
 export default function Navigation() {
   const [searchTerm, setSearchTerm] = useState("");
-  
+  console.log(genre)
   const handleSearch = (e) => {
     e.preventDefault();
     // Replace this console.log with your actual search logic.

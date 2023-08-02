@@ -1,4 +1,3 @@
-import React from 'react';
 import MindfulMoments from './images/MindfulMoments.png';
 import { Link } from 'react-router-dom';
 
@@ -20,9 +19,7 @@ export default function App() {
       }}
     >
      
-      <Link to='/genre'>
-        <button
-          style={{
+      <Link to='/shows'   style={{
             marginLeft: '20rem',
             marginTop: '28rem',
             padding: '10px 30px',
@@ -32,10 +29,10 @@ export default function App() {
             border: 'none',
             borderRadius: '10px',
             cursor: 'pointer',
-          }}
-        >
+          }}>
+        
           Shows
-        </button>
+  
       </Link>
     </div>
   );

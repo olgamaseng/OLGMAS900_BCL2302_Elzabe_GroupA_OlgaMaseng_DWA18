@@ -1,4 +1,3 @@
-import React from 'react'
 import ShowDetails from '../Components/SeasonsAndPreview';
 
 
