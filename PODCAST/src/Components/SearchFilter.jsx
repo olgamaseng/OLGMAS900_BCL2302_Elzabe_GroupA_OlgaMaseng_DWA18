@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
+
 
 const SearchFilter = ({ searchTerm, searchClicked }) => {
   const [shows, setShows] = useState([]);
@@ -26,7 +27,7 @@ const SearchFilter = ({ searchTerm, searchClicked }) => {
 
   return (
     <div>
-      {searchClicked && searchTerm.trim() !== '' && (
+      {searchClicked && (
         <div>
           {filteredShows.length > 0 ? (
             filteredShows.map((show) => (
