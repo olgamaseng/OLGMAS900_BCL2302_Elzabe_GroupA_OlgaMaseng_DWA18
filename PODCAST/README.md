@@ -1,8 +1,9 @@
-# React + Vite
+# MindfulMindset
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The name of my clone is called Mindful Mindset and it was intended to be a podcast clone
 
-Currently, two official plugins are available:
+I used react, bootstrap, vite, html and css.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The app is still to be updated until it meets the requirements, of how I envisioned it
+
+
