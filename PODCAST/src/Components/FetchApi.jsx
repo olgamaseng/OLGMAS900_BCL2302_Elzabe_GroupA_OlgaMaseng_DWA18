@@ -52,7 +52,7 @@ export default function FetchAPI() {
         {dataId.map((show) => (
           <div key={show.id} className="col-md-2 mb-2">
             <div className="card">
-              <Link to={`/home/${show.id}`}>
+              <Link to={`/seasons/${show.id}`}>
                 <img src={show.image} className="card-img-top" alt="show cover" />
               </Link>
               <div className="card-body">

@@ -20,6 +20,10 @@ const RandomImageCarousel = () => {
       });
   }, []);
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div id="randomImageCarousel" className="carousel slide" data-bs-ride="carousel">
       <div className="carousel-inner">

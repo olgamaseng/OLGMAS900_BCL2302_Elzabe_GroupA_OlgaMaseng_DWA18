@@ -39,33 +39,6 @@ export default function Navbar() {
                   shows
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="/seasons">
-                  Seasons
-                </a>
-              </li>
-              <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  ⭐
-                </a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      All Favorites
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      New Favorites
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Old Favorites
-                    </a>
-                  </li>
-                </ul>
-              </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="/genre" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Genre

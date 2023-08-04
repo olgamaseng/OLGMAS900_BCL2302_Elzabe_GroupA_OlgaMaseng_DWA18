@@ -26,7 +26,7 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/seasons", element: <SeasonsPage /> 
+    path: "/seasons/:id", element: <SeasonsPage /> 
   }
 
 ]);

@@ -45,8 +45,10 @@ return (
                     }}
                   >
                     <h3>{episode.title}</h3>
+                    <p>{episode.description} </p>
                     <audio controls>
                       <source src={episode.file} />
+                       
                     </audio>
                     {/* Render other episode details here */}
                   </div>
