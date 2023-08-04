@@ -1,10 +1,12 @@
-import ShowDetails from '../Components/SeasonsAndPreview';
+import ShowDetails from "../Components/SeasonsAndPreview";
+import Navigation from '../Components/Nav'
 
 
 export default function SeasonsPage() {
     return (
       <main>
-        <ShowDetails />
+        <Navigation />
+        <ShowDetails/>
       </main>
     );
   }

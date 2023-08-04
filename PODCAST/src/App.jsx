@@ -19,7 +19,7 @@ export default function App() {
       }}
     >
      
-      <Link to='/shows'   style={{
+      <Link to='/home'   style={{
             marginLeft: '20rem',
             marginTop: '28rem',
             padding: '10px 30px',
@@ -31,9 +31,10 @@ export default function App() {
             cursor: 'pointer',
           }}>
         
-          Shows
+          Home
   
       </Link>
+    
     </div>
   );
 }

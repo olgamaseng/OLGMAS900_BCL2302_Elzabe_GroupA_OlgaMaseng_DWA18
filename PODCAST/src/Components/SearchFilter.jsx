@@ -1,4 +1,5 @@
 import  { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const SearchFilter = ({ searchTerm, searchClicked }) => {
@@ -32,7 +33,7 @@ const SearchFilter = ({ searchTerm, searchClicked }) => {
           {filteredShows.length > 0 ? (
             filteredShows.map((show) => (
               <div key={show.id} className="card" style={{ width: '18rem', margin: '10px' }}>
-                <img src={show.image} alt={show.title} className="card-img-top" />
+              <Link> <img src={show.image} alt={show.title} className="card-img-top" /></Link> 
                 <div className="card-body">
                   <h5 className="card-title">{show.title}</h5>
                   <p className="card-text">

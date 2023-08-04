@@ -1,12 +1,13 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-export default function Seasons() {
+export default function ShowDetails() {
   const params = useParams();
-  const [seasons, setSeasons] = React.useState([]);
-  const [selectedSeason, setSelectedSeason] = React.useState(null);
+  const [seasons, setSeasons] = useState([]);
+  const [selectedSeason, setSelectedSeason] = useState(null);
+ 
 
-  React.useEffect(() => {
+  useEffect(() => {
     fetch(`https://podcast-api.netlify.app/id/${params.id}`)
       .then((response) => response.json())
       .then((data) => setSeasons(data.seasons));
@@ -20,9 +21,9 @@ export default function Seasons() {
       setSelectedSeason(season);
     }
   };
-
-  return (
+return (
     <div>
+      
       {seasons.length > 0 ? (
         seasons.map((season) => (
           <div key={season.season}>
@@ -34,12 +35,15 @@ export default function Seasons() {
             {selectedSeason && selectedSeason.season === season.season && (
               <div>
                 {selectedSeason.episodes.map((episode) => (
-                  <div key={episode.id}
-                  style={{
-                    backgroundColor: 'purple',
-                    color: 'white',
-                    border: 'none',
-                    borderRadius: '10px', }}>
+                  <div
+                    key={episode.id}
+                    style={{
+                      backgroundColor: "purple",
+                      color: "white",
+                      border: "none",
+                      borderRadius: "10px",
+                    }}
+                  >
                     <h3>{episode.title}</h3>
                     <audio controls>
                       <source src={episode.file} />
@@ -57,5 +61,3 @@ export default function Seasons() {
     </div>
   );
 }
-
-

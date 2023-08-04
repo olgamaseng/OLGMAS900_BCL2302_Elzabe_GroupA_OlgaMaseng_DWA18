@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import SearchFilter from './SearchFilter';
 import podcast from '../images/podcast.jpg';
 
@@ -30,18 +30,18 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="navbar-brand" href="#">
+                <a className="navbar-brand" href="/home">
                   <img src= {podcast} alt="Mindful Moments" width="80" height="50" />
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="/">
-                  Home
+                <a className="nav-link" aria-current="page" href="/shows">
+                  shows
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="/shows">
-                  Shows
+                <a className="nav-link" aria-current="page" href="/seasons">
+                  Seasons
                 </a>
               </li>
               <li className="nav-item dropdown">

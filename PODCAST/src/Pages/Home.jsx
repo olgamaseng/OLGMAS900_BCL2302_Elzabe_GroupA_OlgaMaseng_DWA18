@@ -1,13 +1,16 @@
-import App from '../App';
+import FetchAPI from '../Components/FetchApi';
+import ShowDetails from '../Components/SeasonsAndPreview';
+import Navigation from '../Components/Nav';
+import RandomImageCarousel from '../Components/carousel';
 
 export default function HomePage() {
     return (
       <div>
-           
-              <App />
+        <Navigation />
+        <ShowDetails />
+        <RandomImageCarousel/>
+
 
       </div>
     );
   }
-
-  
